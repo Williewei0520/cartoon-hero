@@ -1,0 +1,19 @@
+{
+  "name": "我的記帳本",
+  "short_name": "記帳本",
+  "description": "簡單的收支記帳工具，支援分類、日期與每週/每月統計。",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f5f9",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

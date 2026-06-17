@@ -8,6 +8,9 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="記帳本" />
   <title>記帳本</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
+  <link rel="apple-touch-icon" href="icon.svg" />
   <style>
     :root {
       --bg: #f4f5f9;
@@ -426,6 +429,11 @@
     document.getElementById('date').value = todayStr();
     renderCats();
     render();
+
+    // ---------- 註冊 Service Worker（離線使用，需透過網址開啟時才生效）----------
+    if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+      navigator.serviceWorker.register('sw.js').catch(() => {});
+    }
   </script>
 </body>
 </html>
